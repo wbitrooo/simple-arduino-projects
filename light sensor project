@@ -1,0 +1,30 @@
+Int boh=A0
+Void setup(){
+pinMode(A0,INPUT); //sensor of light
+pinMode(3,OUTPUT); //buzzer
+pinMode(4,OUTPUT); //buzzer
+PinMode(13,OUTPUT); //led
+Serial.begin(9600);
+Void loop(){
+Int no=analogRead(boh)
+Serial.println(no)
+delay(500);
+If(no<=450){
+Serial.println(“WAKE UP,IS MORNING”)
+digitalWrite(3,HIGH);
+digitalWrite(4,HIGH);
+digitalWrite(13,LOW);
+}
+If(no>=600){
+Serial.println(“GO SLEEP IS LATE RIGHT NOW”)
+digitalWrite(3,LOW);
+digitalWrite(4,LOW);
+digitalWrite(13,HIGH);
+}
+else{
+Serial.println(“GO PLAY OUTSIDE RIGHT NOW”)
+digitalWrite(3,LOW); 
+digitalWrite(4,LOW); 
+digitalWrite(13,LOW);
+
+
