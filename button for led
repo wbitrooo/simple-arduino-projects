@@ -1,0 +1,13 @@
+void setup(){
+pinMode(3,INPUT_PULLUP); //button
+pinMode(6,OUTPUT); //led
+}
+void loop(){
+int press=digitalRead(3);
+if(press==LOW){
+digitalWrite(6,HIGH);
+ }
+else{
+digitalWrite(6,LOW);
+ }
+}
