@@ -10,9 +10,10 @@ void loop(){
  int no = digitalRead(2);
  Serial.println(no);
  delay(1);
-if(no==0 and ultimoStato ==LOW){
-  statoLed !=statoLed;
+if(no==0 and ultimoStati ==LOW){
+  statoLed =!statoLed;
   digitalWrite(12,statoLed);
   delay(200);
+  ultimoStati=no;
 }
 }
