@@ -1,4 +1,3 @@
-int boh=0;
 bool statoLed = false;
 bool ultimoStati = LOW;
 void setup(){
@@ -13,7 +12,8 @@ void loop(){
 if(no==0 and ultimoStati ==LOW){
   statoLed =!statoLed;
   digitalWrite(12,statoLed);
-  delay(200);
-  ultimoStati=no;
 }
+delay(200);
+ultimoStati=no;
 }
+
