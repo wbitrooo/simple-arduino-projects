@@ -1,0 +1,15 @@
+void setup(){
+pinMode(3,INPUT_PULLUP); //button1
+pinMode(6,INPUT_PULLUP); //button2
+pinMode(13,OUTPUT); //led
+}
+void loop(){
+int ledhigh=digitalRead(3);
+int ledlow=digitalRead(6);
+if(ledhigh==LOW){
+digitalWrite(13,HIGH);
+}
+else if(ledlow==LOW){
+digitalWrite(13,LOW);
+}
+}
